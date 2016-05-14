@@ -8,5 +8,5 @@ $criteria = new CDbCriteria();
 $criteria->select = 't.id';
 $command = ActiveFinder::getCommand($model, $criteria);
 // $command variable have the SQL text
-return $command->queryColumn();
+$sql = $command->text;
 ```
